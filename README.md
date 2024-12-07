@@ -1,4 +1,4 @@
-# COVID-19-Chest- Xray-Analyzer
+# COVID-19 Chest-Xray-Analyzer
 ## Introduction  
 COVID-19, caused by the SARS-CoV-2 virus, emerged as a global pandemic, significantly affecting public health worldwide. The disease primarily impacts the respiratory system, with common symptoms including fever, dry cough, fatigue, and in severe cases, difficulty breathing. Early detection and diagnosis play a critical role in managing the disease and preventing its spread.  
 
