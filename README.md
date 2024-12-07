@@ -34,12 +34,22 @@ To prepare the dataset for training and ensure robust model performance, the fol
        horizontal_flip=True,
        fill_mode='nearest'
    )
+   
+<p align="center">
+  <img src="https://github.com/mahita2104/COVID-Xray-Analyzer/blob/main/Images/Covid_image_augmentation.png" />
+</p> 
+ <p align="center">
+  <img src="https://github.com/mahita2104/COVID-Xray-Analyzer/blob/main/Images/Normal_image_augmentation.png" />
+</p> 
+
 2. **Feature Extraction with HOG (Histogram of Oriented Gradients):**
-    For each augmented image, features were extracted as follows:
+   For each augmented image, features were extracted as follows:
       - The augmented color images were converted to grayscale.
       - HOG (Histogram of Oriented Gradients) was applied to extract important spatial features.
       - Features were normalized using the L2-Hys block normalization method, and the cell size was set to (16, 16) pixels.
-3. **Feature Vector Compilation:**
+   
+4. **Feature Vector Compilation:**
+
    The extracted HOG features from all augmented images were stored as feature vectors for downstream classification tasks.
 
 ## Methodology
@@ -66,7 +76,18 @@ The methodology followed in this project includes the following steps:
 ## Classification Report
 The classification performance was evaluated using the following metrics and visualizations:
  - **ROC Curve**: Demonstrates the tradeoff between sensitivity and specificity for the classifier.
- - **Accuracy Score Table**: Displays the model's performance across different hyperparameter settings.
+<p align="center">
+  <img src="https://github.com/mahita2104/COVID-Xray-Analyzer/blob/main/Images/Roc_curve.png" />
+</p> 
+
+ - **Evaluation Metrics Table**: Displays the model's performance across metrics commonly used in classification model evaluation.
+ <p align="center">
+  <img src="https://github.com/mahita2104/COVID-Xray-Analyzer/blob/main/Images/Evaluation_metrics.png" />
+</p> 
+
  - **3D Scatter Plot**: Visualizes the decision boundaries and classification results of the SVM classifier.
+ <p align="center">
+  <img src="https://github.com/mahita2104/COVID-Xray-Analyzer/blob/main/Images/3d_plot.png" />
+</p> 
 
 
