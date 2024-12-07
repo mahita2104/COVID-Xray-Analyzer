@@ -14,16 +14,15 @@ You can access the dataset here: [COVID-19 Chest X-Ray Dataset](https://www.kagg
 ## Preprocessing  
 To prepare the dataset for training and ensure robust model performance, the following preprocessing steps were undertaken:  
 
-1. **Data Augmentation:**  
-   Augmentation techniques were applied to increase the dataset's diversity and improve generalization. The augmentation pipeline included:  
+- **Data Augmentation:** Augmentation techniques were applied to increase the dataset's diversity and improve generalization. The augmentation pipeline included:  
    - **Rotation:** Up to 20 degrees.  
    - **Width and Height Shifting:** Up to 20% of the total image dimensions.  
    - **Shearing:** Up to 20%.  
    - **Zooming:** Up to 20%.  
    - **Horizontal Flipping:** Randomly flipping the images horizontally.  
    - **Fill Mode:** Filling any gaps created during augmentation with the nearest pixel values.  
-   The augmentation process was implemented using the `ImageDataGenerator` class from TensorFlow/Keras.
 
+    The augmentation process was implemented using the `ImageDataGenerator` class from TensorFlow/Keras.
    ```python
    datagen = ImageDataGenerator(
        rotation_range=20,
@@ -35,22 +34,13 @@ To prepare the dataset for training and ensure robust model performance, the fol
        fill_mode='nearest'
    )
    
-<p align="center">
-  <img src="https://github.com/mahita2104/COVID-Xray-Analyzer/blob/main/Images/Covid_image_augmentation.png" />
-</p> 
- <p align="center">
-  <img src="https://github.com/mahita2104/COVID-Xray-Analyzer/blob/main/Images/Normal_image_augmentation.png" />
-</p> 
-
-2. **Feature Extraction with HOG (Histogram of Oriented Gradients):**
-   For each augmented image, features were extracted as follows:
+ - **Feature Extraction with HOG (Histogram of Oriented Gradients):**
+  For each augmented image, features were extracted as follows:
       - The augmented color images were converted to grayscale.
       - HOG (Histogram of Oriented Gradients) was applied to extract important spatial features.
       - Features were normalized using the L2-Hys block normalization method, and the cell size was set to (16, 16) pixels.
-   
-4. **Feature Vector Compilation:**
-
-   The extracted HOG features from all augmented images were stored as feature vectors for downstream classification tasks.
+ - **Feature Vector Compilation:**
+    The extracted HOG features from all augmented images were stored as feature vectors for downstream classification tasks.
 
 ## Methodology
 The methodology followed in this project includes the following steps:
@@ -58,10 +48,10 @@ The methodology followed in this project includes the following steps:
 1. **Preprocessing:**
    - Augmented the dataset using various transformations (detailed above).
    - Extracted HOG features to capture critical spatial information and reduce the computational complexity of the model.
-3. **Dataset Preparation:**
+2. **Dataset Preparation:**
    - Collected the feature vectors into a dataset.
    - Shuffled the dataset to ensure unbiased training and testing.
-3.**Classification with SVM:**
+3. **Classification with SVM:**
    - Implemented Support Vector Machines (SVM) with the RBF kernel for classification.
    - Tuned hyperparameters using Grid Search to optimize performance.
    - Trained and tested the classifier on the feature vectors to distinguish between COVID-19 and normal X-ray images.
