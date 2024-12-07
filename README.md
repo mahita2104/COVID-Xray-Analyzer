@@ -33,6 +33,12 @@ To prepare the dataset for training and ensure robust model performance, the fol
        horizontal_flip=True,
        fill_mode='nearest'
    )
+<p align="center">
+  <img src="https://github.com/mahita2104/COVID-Xray-Analyzer/blob/main/Images/Covid_image_augmentation.png" />
+</p> 
+<p align="center">
+  <img src="https://github.com/mahita2104/COVID-Xray-Analyzer/blob/main/Images/Normal_image_augmentation.png" />
+</p> 
    
  - **Feature Extraction with HOG (Histogram of Oriented Gradients):**
   For each augmented image, features were extracted as follows:
