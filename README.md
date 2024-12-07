@@ -14,7 +14,8 @@ You can access the dataset here: [COVID-19 Chest X-Ray Dataset](https://www.kagg
 ## Preprocessing  
 To prepare the dataset for training and ensure robust model performance, the following preprocessing steps were undertaken:  
 
-- **Data Augmentation:** Augmentation techniques were applied to increase the dataset's diversity and improve generalization. The augmentation pipeline included:  
+- **Data Augmentation:** <br>
+   Augmentation techniques were applied to increase the dataset's diversity and improve generalization. The augmentation pipeline included:  
    - **Rotation:** Up to 20 degrees.  
    - **Width and Height Shifting:** Up to 20% of the total image dimensions.  
    - **Shearing:** Up to 20%.  
@@ -40,12 +41,12 @@ To prepare the dataset for training and ensure robust model performance, the fol
   <img src="https://github.com/mahita2104/COVID-Xray-Analyzer/blob/main/Images/Normal_image_augmentation.png" />
 </p> 
    
- - **Feature Extraction with HOG (Histogram of Oriented Gradients):**
+ - **Feature Extraction with HOG (Histogram of Oriented Gradients):** <br>
   For each augmented image, features were extracted as follows:
       - The augmented color images were converted to grayscale.
       - HOG (Histogram of Oriented Gradients) was applied to extract important spatial features.
       - Features were normalized using the L2-Hys block normalization method, and the cell size was set to (16, 16) pixels.
- - **Feature Vector Compilation:**
+ - **Feature Vector Compilation:** <br>
     The extracted HOG features from all augmented images were stored as feature vectors for downstream classification tasks.
 
 ## Methodology
@@ -73,7 +74,7 @@ The methodology followed in this project includes the following steps:
 The classification performance was evaluated using the following metrics and visualizations:
  - **ROC Curve**: Demonstrates the tradeoff between sensitivity and specificity for the classifier.
 <p align="center">
-  <img src="https://github.com/mahita2104/COVID-Xray-Analyzer/blob/main/Images/Roc_curve.png" />
+  <img src="https://github.com/mahita2104/COVID-Xray-Analyzer/blob/main/Images/Roc_curve.png" height="320" />
 </p> 
 
  - **Evaluation Metrics Table**: Displays the model's performance across metrics commonly used in classification model evaluation.
@@ -83,7 +84,7 @@ The classification performance was evaluated using the following metrics and vis
 
  - **3D Scatter Plot**: Visualizes the decision boundaries and classification results of the SVM classifier.
  <p align="center">
-  <img src="https://github.com/mahita2104/COVID-Xray-Analyzer/blob/main/Images/3d_plot.png" />
+  <img src="https://github.com/mahita2104/COVID-Xray-Analyzer/blob/main/Images/3d_plot.png" height="380" />
 </p> 
 
 
